@@ -58,7 +58,7 @@ let
           set -e
           set +o pipefail
           NIX_CONF_DIR=$PWD \
-            ${cfg.package}/bin/nix show-config ${
+            ${cfg.package}/bin/nix config show ${
               optionalString (isNixAtLeast "2.3pre")
               "--no-net --option experimental-features nix-command"
             } \
